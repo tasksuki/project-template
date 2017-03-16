@@ -1,0 +1,35 @@
+{
+    "name": "tasksuki/${NAME_CAN}$",
+    "type": "library",
+    "description": "Tasksuki ${NAME}$ ${PROJECT_TYPE}$",
+    "keywords": ["${NAME_CAN}$", "tasksuki"],
+    "homepage": "https://tasksuki.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "${AUTHOR}$",
+            "email": "${EMAIL}$"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": { "Tasksuki\\${PROJECT_TYPE}$\\${NAME}$\\": "src" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Tasksuki\\${PROJECT_TYPE}$\\${NAME}$\\Test\\": "tests" }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-ci": "vendor/bin/phpunit -c phpunit.xml.ci"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
